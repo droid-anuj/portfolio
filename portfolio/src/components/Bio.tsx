@@ -6,7 +6,7 @@ import { useRef } from "react";
 const Bio = () => {
   const constraintsRef = useRef(null);
   const bioContent = [
-    "I'm a passionate Full-Stack Developer with 4+ years of experience creating dynamic web applications.",
+    "I'm a passionate Full-Stack Developer with 1+ years of experience creating dynamic web applications.",
     "Specializing in modern tech stacks, I bridge the gap between complex requirements and user-friendly experiences.",
     "My mission: Build efficient digital solutions that make measurable impact."
   ];
