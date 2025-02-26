@@ -6,25 +6,64 @@ import { Github, ExternalLink, Code2 } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      name: "Typeform Clone",
+      name: "FilmZ - Web Application",
       description:
-        "A web app for creating and managing custom forms with a sleek design and responsive layout.",
-      tech: ["React", "Node.js", "Tailwind", "MongoDB"],
+        "A user-friendly web app for movie enthusiasts to explore, review, and engage with their favorite films.",
+      tech: ["React", "Redux", "Hooks"],
+      highlights: [
+        "Developed and deployed a responsive movie browsing web app using React and Redux.",
+        "Integrated TMDB APIs for movie data and implemented search and filtering features, improving data retrieval speed by 26%."
+      ],
+      links: {
+        demo: "#",
+        code: "https://github.com/droid-anuj/Filmz"
+      }
+    },
+    {
+      name: "Image Classifier for Disease Detection",
+      description:
+        "An AI-powered image classification system using CNN to detect diseases in chest X-ray images.",
+      tech: ["CNN", "EfficientNet-B0", "Python"],
+      highlights: [
+        "Achieved 92% accuracy on the validation set and 89% on the test set.",
+        "Utilized separate generators for validation and test sets to optimize model performance.",
+        "Applied ROC curve and AUROC analysis for enhanced disease diagnosis and treatment planning."
+      ],
       links: {
         demo: "#",
         code: "#"
       }
     },
     {
-      name: "AI Chatbot",
+      name: "ShopSense: Inventory Management System",
       description:
-        "A Django-based AI chatbot leveraging advanced language models to provide interactive, human-like responses.",
-      tech: ["Django", "Python", "LLM", "WebSockets"],
+        "A dynamic web application built with React.js to streamline inventory management for businesses.",
+      tech: ["React.js", "MongoDB", "Node.js"],
+      highlights: [
+        "Developed a responsive frontend using React and a secure backend with Node.js and MongoDB.",
+        "Implemented JWT-based authentication for enhanced user security."
+      ],
       links: {
         demo: "#",
-        code: "#"
+        code: "https://github.com/stickqz/IMS"
       }
-    },
+    }
+    ,
+  {
+    name: "Flexibble - Dribbble Clone",
+    description:
+      "A Dribbble-inspired platform built with Next.js for designers to showcase their creative work.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB"],
+    highlights: [
+      "Developed a fully responsive UI with Next.js and Tailwind CSS for an enhanced user experience.",
+      "Implemented user authentication and authorization using NextAuth.js.",
+      "Built a backend with MongoDB and integrated real-time updates using WebSockets."
+    ],
+    links: {
+      demo: "#",
+      code: "https://github.com/droid-anuj/Flexibble/tree/main"
+    }
+  }
   ];
 
   return (
@@ -35,7 +74,7 @@ const Projects = () => {
         animate={{ rotate: 360, scale: [1, 1.2, 1] }}
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
       />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="relative backdrop-blur-lg bg-white/5 rounded-3xl border border-white/10 p-12 shadow-2xl"
@@ -91,9 +130,17 @@ const Projects = () => {
                   <h3 className="text-2xl font-bold text-highlight mb-4">
                     {project.name}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed mb-6">
+                  <p className="text-gray-300 leading-relaxed mb-4">
                     {project.description}
                   </p>
+
+                  {/* Highlights Section */}
+                  <ul className="list-disc list-inside text-gray-400 mb-6">
+                    {project.highlights.map((highlight, i) => (
+                      <li key={i} className="mb-1">{highlight}</li>
+                    ))}
+                  </ul>
+
                   <div className="flex flex-wrap gap-3">
                     {project.tech.map((tech) => (
                       <motion.span

@@ -1,7 +1,7 @@
 // src/components/Footer.tsx
 "use client";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -9,22 +9,17 @@ const Footer = () => {
     {
       name: "GitHub",
       icon: <Github className="w-6 h-6" />,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/droid-anuj",
     },
     {
       name: "LinkedIn",
       icon: <Linkedin className="w-6 h-6" />,
-      url: "https://linkedin.com/in/yourusername",
-    },
-    {
-      name: "Twitter",
-      icon: <Twitter className="w-6 h-6" />,
-      url: "https://twitter.com/yourusername",
+      url: "https://www.linkedin.com/in/anuj-yadav-194aa81bb/",
     },
     {
       name: "Email",
       icon: <Mail className="w-6 h-6" />,
-      url: "mailto:your.email@example.com",
+      url: "mailto:Anujyadavvvv12345@gmail.com",
     },
   ];
 

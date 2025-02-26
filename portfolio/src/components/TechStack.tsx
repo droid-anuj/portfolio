@@ -1,9 +1,12 @@
 // src/components/TechStack.tsx
 "use client";
 import { motion } from "framer-motion";
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiDjango, SiGraphql, SiDocker, SiKubernetes, SiAmazon } from "react-icons/si";
 import { Star, BookOpen, Compass } from "lucide-react";
 import { JSX } from "react";
+import {
+  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiDjango, SiGraphql, 
+  SiDocker, SiKubernetes, SiAmazon, SiMongodb, SiPython, SiGit, SiMysql
+} from "react-icons/si";
 
 const techIcons: { [key: string]: JSX.Element } = {
   React: <SiReact className="w-6 h-6" />,
@@ -16,13 +19,18 @@ const techIcons: { [key: string]: JSX.Element } = {
   Docker: <SiDocker className="w-6 h-6" />,
   Kubernetes: <SiKubernetes className="w-6 h-6" />,
   AWS: <SiAmazon className="w-6 h-6" />,
+  MongoDB: <SiMongodb className="w-6 h-6" />,
+  Python: <SiPython className="w-6 h-6" />,
+  Git: <SiGit className="w-6 h-6" />,
+  "Database Management": <SiMysql className="w-6 h-6" />,  // Used MySQL as a placeholder
 };
+
 
 const TechStack = () => {
   const techStack = {
-    regular: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    knowledge: ["Node.js", "Django", "GraphQL"],
-    familiarity: ["Docker", "Kubernetes", "AWS"],
+    regular: ["React", "Next.js", "TypeScript", "Tailwind CSS","Django","Python"],
+    knowledge: ["Node.js", "MongoDB", "GraphQL","Machine Learning","OOPS","Database Management" ],
+    familiarity: ["Docker", "Kubernetes", "AWS","Git"],
   };
 
   const categoryIcons = {
