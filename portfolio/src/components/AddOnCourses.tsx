@@ -6,33 +6,34 @@ import { Bookmark,  GraduationCap } from "lucide-react";
 const AddOnCourses = () => {
   const courses = [
     {
-      title: "React Advanced",
+      title: "React - The Complete Guide",
       institution: "Udemy",
       year: 2023,
       description:
-        "Deep dive into React patterns, hooks, and performance optimization.",
+        "Comprehensive course covering React fundamentals, hooks, React Router, and Redux.",
       icon: <Bookmark className="w-6 h-6" />,
-      skills: ["Hooks", "Context API", "Performance", "Testing"]
+      skills: ["Hooks", "React Router", "Redux", "Component Design"]
     },
     {
-      title: "Next.js Mastery",
-      institution: "Coursera",
+      title: "The Complete Web Development Course",
+      institution: "Udemy",
       year: 2022,
       description:
-        "Comprehensive guide to building SSR and static sites with Next.js.",
+        "Full-stack web development course covering HTML, CSS, JavaScript, and backend technologies.",
       icon: <Bookmark className="w-6 h-6" />,
-      skills: ["SSR", "Static Generation", "API Routes", "Optimization"]
+      skills: ["HTML", "CSS", "JavaScript", "Backend"]
     },
     {
-      title: "TypeScript Fundamentals",
-      institution: "Pluralsight",
+      title: "Complete AI & Machine Learning Bootcamp",
+      institution: "Udemy",
       year: 2023,
       description:
-        "Learn the basics of TypeScript and how to integrate it into modern projects.",
+        "Covers Data Science, Machine Learning, AI concepts, and Python with TensorFlow and Pandas.",
       icon: <GraduationCap className="w-6 h-6" />,
-      skills: ["Type System", "Generics", "Decorators", "Tooling"]
-    },
+      skills: ["Machine Learning", "Data Science", "TensorFlow", "Python"]
+    }
   ];
+  
 
   return (
     <section id="courses" className="relative py-20 overflow-hidden">
@@ -76,10 +77,10 @@ const AddOnCourses = () => {
                 <div className="absolute inset-0 bg-highlight/10 rounded-2xl transform group-hover:rotate-1 transition-transform" />
                 <div className="relative p-8 bg-primary/50 rounded-2xl border border-highlight/30 backdrop-blur-sm hover:border-highlight transition-colors">
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="p-3 bg-highlight/10 rounded-full">
+                    <div className="p-3 bg-white rounded-full">
                       {course.icon}
                     </div>
-                    <span className="px-3 py-1 bg-highlight/10 text-highlight rounded-full text-sm">
+                    <span className="px-3 py-1 bg-white text-highlight rounded-full text-sm">
                       {course.year}
                     </span>
                   </div>

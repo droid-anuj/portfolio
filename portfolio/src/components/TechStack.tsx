@@ -69,7 +69,7 @@ const TechStack = () => {
             transition={{ duration: 0.5 }}
             className="text-5xl font-bold text-center mb-16"
           >
-            <span className="bg-gradient-to-r from-warning to-highlight bg-clip-text text-transparent">
+            <span className="text-white bg-clip-text">
               Tech Stack
             </span>
           </motion.h2>
@@ -87,7 +87,7 @@ const TechStack = () => {
                 <div className="absolute inset-0 bg-highlight/10 rounded-2xl transform group-hover:-rotate-1 transition-transform" />
                 <div className="relative p-8 bg-primary/50 rounded-2xl border border-highlight/30 backdrop-blur-sm hover:border-highlight transition-colors">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 bg-highlight/10 rounded-xl">
+                    <div className="p-3 bg-white rounded-xl">
                       {categoryIcons[category as keyof typeof categoryIcons]}
                     </div>
                     <h3 className="text-2xl font-bold text-highlight capitalize">
