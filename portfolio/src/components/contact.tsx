@@ -48,7 +48,7 @@ const ContactSection = () => {
             >
               <div className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                 <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8 text-orange-600" />
-                <span className="text-base sm:text-lg font-medium text-orange-700">Let's Connect</span>
+                <span className="text-base sm:text-lg font-medium text-orange-700">Let&apos;s Connect</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4 sm:mb-6">
                 <span className="bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">

@@ -1,6 +1,5 @@
 // src/components/Projects.tsx
 "use client";
-import { motion } from "framer-motion";
 import { Github, ExternalLink, Code2, Calendar, Zap } from "lucide-react";
 
 const Projects = () => {

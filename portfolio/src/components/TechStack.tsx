@@ -84,7 +84,7 @@ const TechStack = () => {
         {/* Tech Categories Grid */}
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {Object.entries(techStack).map(([key, category], idx) => (
+            {Object.entries(techStack).map(([key, category]) => (
               <div
                 key={key}
                 className="group relative"
@@ -133,7 +133,7 @@ const TechStack = () => {
                   {/* Technologies */}
                   <div className="space-y-3">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Technologies</h4>
-                    {category.techs.map((tech, techIndex) => (
+                    {category.techs.map((tech) => (
                       <div
                         key={tech}
                         className="flex items-center gap-4 p-3 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl hover:from-orange-100 hover:to-yellow-100 transition-all duration-300 hover:scale-105 border border-orange-100"

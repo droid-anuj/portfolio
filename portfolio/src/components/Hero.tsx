@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
@@ -35,7 +34,7 @@ const Hero = () => {
           <div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
               <span className="text-xl sm:text-3xl md:text-4xl block text-gray-600">
-                Hello, I'm
+                Hello, I&apos;m
               </span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-600">
                 Anuj Yadav

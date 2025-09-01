@@ -1,6 +1,6 @@
 // src/components/Education.tsx
 "use client";
-import { motion } from "framer-motion";
+
 import { GraduationCap, Book, Code, Trophy, Calendar, MapPin } from "lucide-react";
 
 const Education = () => {
@@ -108,7 +108,7 @@ const Education = () => {
           </h3>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {education.highlights.map((highlight, index) => (
+            {education.highlights.map((highlight) => (
               <div
                 key={highlight.title}
                 className="group relative bg-white/80 backdrop-blur-sm rounded-2xl border border-orange-200/60 p-8 hover:bg-white/90 hover:border-orange-300 hover:shadow-xl hover:shadow-orange-500/10 hover:-translate-y-2 transition-all duration-300"

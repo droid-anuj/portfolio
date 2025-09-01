@@ -1,6 +1,5 @@
 // src/components/Experience.tsx
 "use client";
-import { motion } from "framer-motion";
 import { Briefcase, Rocket, Code, Target, Calendar, Building } from "lucide-react";
 
 const Experience = () => {
@@ -71,7 +70,7 @@ const Experience = () => {
             {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-yellow-600 rounded-full hidden md:block" />
             
-            {experiences.map((exp, index) => (
+            {experiences.map((exp) => (
               <div key={exp.company} className="relative mb-16 last:mb-0">
                 {/* Timeline dot */}
                 <div className="absolute left-4 w-8 h-8 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-full border-4 border-white shadow-lg hidden md:flex md:items-center md:justify-center">
@@ -173,7 +172,7 @@ const Experience = () => {
             <Building className="w-12 h-12 text-orange-600 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Career Journey</h3>
             <p className="text-gray-600 leading-relaxed">
-              From full-stack development to specialized backend engineering, I've grown through diverse 
+              From full-stack development to specialized backend engineering, I&apos;ve grown through diverse 
               technical challenges and contributed to innovative AI-driven solutions. Currently focused on 
               building scalable backend systems and exploring cutting-edge technologies.
             </p>

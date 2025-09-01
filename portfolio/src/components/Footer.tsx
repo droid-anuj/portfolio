@@ -1,6 +1,6 @@
 // src/components/Footer.tsx
 "use client";
-import { Github, Linkedin, Mail, Code, Heart, ArrowUp } from "lucide-react";
+import { Github, Linkedin,  Code, Heart, ArrowUp } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -96,7 +96,7 @@ const Footer = () => {
               <div className="lg:col-span-1">
                 <h4 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
                   <div className="w-2 h-2 bg-yellow-500 rounded-full" />
-                  Let's Connect
+                  Let&apos;s Connect
                 </h4>
                 
                 <p className="text-gray-600 mb-8">
