@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import { Star, BookOpen, Compass, Zap, Code2 } from "lucide-react";
 import {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiDjango, SiGraphql, 
+  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiDjango, SiGraphql,
   SiDocker, SiKubernetes, SiAmazon, SiMongodb, SiPython, SiGit, SiMysql
 } from "react-icons/si";
 
-const techIcons = {
+// ✅ Fix: give explicit type
+const techIcons: Record<string, JSX.Element> = {
   React: <SiReact className="w-6 h-6" />,
   "Next.js": <SiNextdotjs className="w-6 h-6" />,
   TypeScript: <SiTypescript className="w-6 h-6" />,
@@ -21,7 +22,7 @@ const techIcons = {
   Git: <SiGit className="w-6 h-6" />,
   "Database Management": <SiMysql className="w-6 h-6" />,
   "Machine Learning": <SiPython className="w-6 h-6" />,
-  "OOPS": <SiPython className="w-6 h-6" />
+  OOPS: <SiPython className="w-6 h-6" />
 };
 
 const TechStack = () => {
@@ -64,7 +65,7 @@ const TechStack = () => {
       <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-r from-orange-400/15 to-yellow-500/15 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-64 h-64 bg-gradient-to-r from-yellow-400/15 to-orange-500/15 rounded-full blur-3xl" />
       <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-gradient-to-r from-orange-300/10 to-yellow-400/10 rounded-full blur-3xl" />
-      
+
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,140,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,140,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_110%)]" />
 
@@ -85,10 +86,7 @@ const TechStack = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {Object.entries(techStack).map(([key, category]) => (
-              <div
-                key={key}
-                className="group relative"
-              >
+              <div key={key} className="group relative">
                 {/* Featured badge for expert level */}
                 {key === 'expert' && (
                   <div className="absolute -top-4 left-8 px-4 py-2 bg-gradient-to-r from-orange-500 to-yellow-600 text-white rounded-full text-sm font-bold shadow-lg flex items-center gap-2 z-10">
@@ -150,6 +148,7 @@ const TechStack = () => {
             ))}
           </div>
         </div>
+
         {/* Floating decorative elements */}
         <div className="absolute bottom-16 left-8 w-20 h-20 bg-orange-400/20 rounded-2xl blur-sm" />
         <div className="absolute top-32 right-12 w-16 h-16 bg-yellow-500/20 rounded-2xl blur-sm" />
