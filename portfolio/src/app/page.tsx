@@ -8,6 +8,7 @@ import Projects from "../components/Projects";
 import AddOnCourses from "../components/AddOnCourses";
 import TechStack from "../components/TechStack";
 import Footer from "../components/Footer";
+import ContactSection from "@/components/contact";
 
 export default function Home() {
   return (
@@ -15,11 +16,12 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Bio />
-      <Education />
       <Experience />
       <Projects />
-      <AddOnCourses />
       <TechStack />
+      <Education />
+      <AddOnCourses />
+      <ContactSection/>
       <Footer />
     </main>
   );

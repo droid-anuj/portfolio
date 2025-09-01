@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anuj-Profolio",
+  title: "Anuj Yadav",
   description: "Software Developer",
 };
 

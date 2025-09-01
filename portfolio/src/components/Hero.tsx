@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const Hero = () => {
   const constraintsRef = useRef(null);
@@ -8,136 +9,98 @@ const Hero = () => {
 
   return (
     <section 
-      className="relative flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-primary to-secondary px-6 overflow-hidden"
+      className="relative flex flex-col items-center justify-center h-screen text-center bg-gradient-to-br from-orange-50 to-yellow-50 px-6 overflow-hidden"
       ref={constraintsRef}
     >
-      {/* Animated background elements */}
-      <motion.div
-        className="absolute w-96 h-96 bg-highlight/20 rounded-full blur-3xl -top-48 -left-48"
-        animate={{ rotate: 360, scale: [1, 1.2, 1] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      />
-      
-      <motion.div
-        className="absolute w-96 h-96 bg-warning/20 rounded-full blur-3xl -bottom-48 -right-48"
-        animate={{ rotate: -360, scale: [1, 1.2, 1] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      />
+      {/* Static background elements */}
+      <div className="absolute w-96 h-96 bg-gradient-to-r from-orange-400/20 to-yellow-500/20 rounded-full blur-3xl -top-48 -left-48" />
+      <div className="absolute w-96 h-96 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 rounded-full blur-3xl -bottom-48 -right-48" />
 
-      {/* Main content */}
-      <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.h1 
-            className="text-5xl md:text-8xl font-bold mb-6"
-            initial={{ letterSpacing: "-0.5em", opacity: 0 }}
-            animate={{ letterSpacing: "0em", opacity: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-          >
-            <span className="text-textPrimary bg-clip-text">
-              Anuj Yadav
-            </span>
-          </motion.h1>
+      {/* Main content - Side by side layout */}
+      <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 max-w-6xl">
+        
+        {/* Profile Image - Left side */}
+        <div className="relative z-10 flex-shrink-0">
+          <Image
+            src="/profile.jpeg"
+            alt="Profile"
+            width={300}
+            height={300}
+            className="rounded-full object-cover border-4 border-orange-500 shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 transition-shadow duration-300"
+          />
+        </div>
 
-          <motion.div
-            className="text-xl md:text-3xl mb-8 font-mono text-gray-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            <span className="mr-2">&gt;_</span>
-            <motion.span
-              className="border-r-2 border-highlight pr-1"
-              animate={{ borderColor: ["transparent", "#ffd700", "transparent"] }}
-              transition={{ repeat: Infinity, duration: 1 }}
-            >
-              Software Developer
-            </motion.span>
-          </motion.div>
+        {/* Text Content - Right side */}
+        <div className="flex-1 text-left lg:text-left">
+          <div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+              <span className="text-xl sm:text-3xl md:text-4xl block text-gray-600">
+                Hello, I'm
+              </span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-600">
+                Anuj Yadav
+              </span>
+            </h1>
 
-          <motion.div className="flex justify-center gap-4 mb-12">
-            {technologies.map((tech, index) => (
-              <motion.span
-                key={tech}
-                className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-gray-200 border border-highlight/30 hover:border-highlight cursor-pointer"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ 
-                  delay: 0.8 + index * 0.1,
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20
-                }}
-                whileHover={{ y: -5 }}
+            <div className="text-xl md:text-2xl mb-8 font-mono text-gray-700">
+              <span className="mr-2 text-orange-600">&gt;_</span>
+              <span className="border-r-2 border-orange-500 pr-1">
+                Full stack Developer  | Backend Developer
+              </span>
+            </div>
+
+            <div className="flex flex-wrap gap-3 mb-12">
+              {technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-gray-700 border border-orange-200 hover:border-orange-500 hover:bg-orange-50 hover:text-orange-700 hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-500/20 cursor-pointer transition-all duration-300"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-4 mt-6">
+              {/* LinkedIn */}
+              <a 
+                href="https://www.linkedin.com/in/anuj-yadav-194aa81bb/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 p-3 rounded-full bg-white/80 hover:bg-blue-600 hover:text-white border border-blue-600 hover:shadow-lg hover:shadow-blue-500/20 hover:scale-105 transition-all duration-300"
               >
-                {tech}
-              </motion.span>
-            ))}
-          </motion.div>
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v16H.22V8zM8.22 8h4.38v2.16h.06c.61-1.16 2.12-2.38 4.36-2.38 4.66 0 5.52 3.06 5.52 7.04V24H18.7v-7.52c0-1.8-.03-4.12-2.52-4.12-2.52 0-2.9 1.96-2.9 3.98V24H8.22V8z"/>
+                </svg>
+              </a>
 
-          <motion.a 
-            href="#projects"
-            className="inline-flex items-center px-8 py-4 bg-textPrimary text-highlight text-lg font-semibold rounded-lg shadow-lg border-2 border-highlight hover:border-red-500  transition-all duration-300 group"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View My Work
-            <motion.svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 ml-2 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </motion.svg>
-          </motion.a>
-        </motion.div>
+              {/* GitHub */}
+              <a 
+                href="https://github.com/droid-anuj" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-700 p-3 rounded-full bg-white/80 hover:bg-gray-800 hover:text-white border border-gray-400 hover:shadow-lg hover:shadow-gray-500/20 hover:scale-105 transition-all duration-300"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.28 3.438 9.756 8.207 11.344.6.11.793-.26.793-.577v-2.03c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.73.082-.73 1.204.084 1.838 1.238 1.838 1.238 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.762-1.605-2.665-.303-5.467-1.334-5.467-5.933 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23.958-.267 1.986-.4 3.005-.405 1.02.005 2.048.138 3.008.405 2.288-1.552 3.294-1.23 3.294-1.23.655 1.653.244 2.874.12 3.176.77.84 1.232 1.91 1.232 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.823 1.1.823 2.22v3.293c0 .32.192.694.8.576C20.565 22.253 24 17.776 24 12.5 24 5.87 18.63.5 12 .5z"/>
+                </svg>
+              </a>
 
-        {/* Scroll indicator */}
-        {/* <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-300"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-        >
-          <span className="text-sm">Scroll down</span>
-          <motion.div
-            className="w-6 h-10 rounded-3xl border-2 border-highlight flex justify-center p-1"
-            animate={{ y: [0, 20, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            <div className="w-2 h-2 bg-highlight rounded-full" />
-          </motion.div>
-        </motion.div> */}
+              {/* Resume Download */}
+              <a 
+                href="/resume.pdf" 
+                download
+                className="px-6 py-3 bg-gradient-to-r from-orange-500 to-yellow-600 text-white rounded-lg border border-orange-500 hover:from-orange-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-orange-500/20 hover:scale-105 transition-all duration-300"
+              >
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Floating elements that can be dragged */}
-      <motion.div
-        className="absolute top-1/4 left-1/4 w-8 h-8 bg-warning/30 rounded-full blur-lg"
-        drag
-        dragConstraints={constraintsRef}
-        animate={{ scale: [1, 1.5, 1] }}
-        transition={{ duration: 4, repeat: Infinity }}
-      />
-      <motion.div
-        className="absolute top-1/3 right-1/4 w-12 h-12 bg-highlight/30 rounded-full blur-lg"
-        drag
-        dragConstraints={constraintsRef}
-        animate={{ scale: [1, 0.8, 1] }}
-        transition={{ duration: 5, repeat: Infinity }}
-      />
+      {/* Static decorative elements */}
+      <div className="absolute top-1/4 left-1/4 w-8 h-8 bg-orange-400/30 rounded-full blur-lg" />
+      <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-yellow-500/30 rounded-full blur-lg" />
     </section>
   );
 };
