@@ -123,7 +123,7 @@ const ContactSection = () => {
                   
                   <div className="space-y-3">
                     <motion.a
-                      href="https://www.linkedin.com/in/anuj-yadav"
+                      href="https://www.linkedin.com/in/anuj-yadav-194aa81bb/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 p-3 sm:p-4 bg-gradient-to-r from-orange-100/80 to-yellow-100/80 rounded-xl border border-orange-200/50 hover:from-orange-200/80 hover:to-yellow-200/80 hover:border-orange-400/50 transition-all duration-300 group"
@@ -136,7 +136,7 @@ const ContactSection = () => {
                     </motion.a>
                     
                     <motion.a
-                      href="https://github.com/anuj-yadav"
+                      href="https://github.com/droid-anuj"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 p-3 sm:p-4 bg-gradient-to-r from-orange-100/80 to-yellow-100/80 rounded-xl border border-orange-200/50 hover:from-orange-200/80 hover:to-yellow-200/80 hover:border-orange-400/50 transition-all duration-300 group"
