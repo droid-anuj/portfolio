@@ -1,6 +1,6 @@
 // src/components/Projects.tsx
 "use client";
-import { Github, ExternalLink, Code2, Calendar, Zap } from "lucide-react";
+import { Github, ExternalLink, Code2, Zap } from "lucide-react";
 
 const Projects = () => {
   const projects = [
