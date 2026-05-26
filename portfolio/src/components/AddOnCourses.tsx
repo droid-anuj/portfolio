@@ -6,31 +6,31 @@ import { Bookmark, GraduationCap, Award, BookOpen } from "lucide-react";
 const AddOnCourses = () => {
   const courses = [
     {
-      title: "React - The Complete Guide",
+      title: "React Complete Guide",
       institution: "Udemy",
       description:
-        "Comprehensive course covering React fundamentals, hooks, React Router, and Redux.",
+        "Comprehensive course covering Hooks, React Router, Redux, and modern React design patterns.",
       icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />,
-      skills: ["Hooks", "React Router", "Redux", "Component Design"],
+      skills: ["Hooks", "React Router", "Redux", "Modern Patterns"],
       category: "Frontend Development"
     },
     {
-      title: "The Complete Web Development Course", 
+      title: "Full Stack Web Development", 
       institution: "Udemy",
       description:
-        "Full-stack web development course covering HTML, CSS, JavaScript, and backend technologies.",
+        "Extensive training in modern frontend and backend technologies, building full-scale web applications.",
       icon: <Bookmark className="w-5 h-5 sm:w-6 sm:h-6" />,
-      skills: ["HTML", "CSS", "JavaScript", "Backend"],
+      skills: ["HTML5 / CSS3", "JavaScript", "Backend Integration", "Database Design"],
       category: "Full-Stack Development"
     },
     {
-      title: "Complete AI & Machine Learning Bootcamp",
-      institution: "Udemy", 
+      title: "Algorithm Problem Solving",
+      institution: "LeetCode", 
       description:
-        "Covers Data Science, Machine Learning, AI concepts, and Python with TensorFlow and Pandas.",
+        "Solved 700+ problems focusing on data structures, algorithms design, complexity analysis, and performance optimization.",
       icon: <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />,
-      skills: ["Machine Learning", "Data Science", "TensorFlow", "Python"],
-      category: "AI & Data Science"
+      skills: ["Data Structures", "Algorithms", "Performance Tuning", "Complexity Analysis"],
+      category: "Computer Science"
     }
   ];
 

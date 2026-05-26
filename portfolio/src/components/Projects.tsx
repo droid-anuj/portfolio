@@ -5,18 +5,16 @@ import { Github, ExternalLink, Code2, Calendar, Zap } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      name: "VisionPad – Real-Time Collaboration Platform",
+      name: "VisionPad -- Real-Time Collaboration Platform",
       description:
-        "A modern collaborative whiteboard platform enabling real-time multi-user interaction with seamless synchronization across devices.",
+        "A real-time collaborative whiteboard platform supporting multi-user live sync with sub-200ms latency.",
       tech: ["Next.js", "React", "Liveblocks", "Clerk", "Convex", "TypeScript"],
-      date: "Jun 2025",
+
       featured: true,
       highlights: [
-        "Developed real-time collaborative whiteboard with instant multi-user sync",
-        "Leveraged Liveblocks for conflict-free collaborative editing",
-        "Implemented secure authentication using Clerk with role-based access",
-        "Utilized Convex for persistent, real-time data storage and synchronization",
-        "Designed intuitive UI for seamless cross-device collaboration experience"
+        "Built real-time collaborative whiteboard supporting multi-user live sync with sub-200ms latency using Liveblocks.",
+        "Enforced secure role-based authentication and persistent shared state with Clerk and Convex.",
+        "Led end-to-end architecture planning and deployed on Vercel with zero-downtime releases."
       ],
       links: {
         demo: "https://vision-pad-83a.vercel.app",
@@ -24,17 +22,33 @@ const Projects = () => {
       }
     },
     {
-      name: "FilmZ - Web Application",
+      name: "MirrorAPI -- Developer API Toolkit",
       description:
-        "A user-friendly web app for movie enthusiasts to explore, review, and engage with their favorite films.",
-      tech: ["React", "Redux", "JavaScript", "TMDB API"],
-      date: "2024",
+        "A full-stack API development toolkit enabling developers to instantly create mock endpoints, inspect live webhooks, and clone external APIs.",
+      tech: ["Django", "Django REST Framework", "Django Channels", "React", "WebSockets"],
+
+      featured: true,
+      highlights: [
+        "Built a full-stack API development toolkit enabling developers to instantly create mock endpoints, inspect live webhooks, and clone external APIs for local testing.",
+        "Implemented real-time webhook inspection using Django Channels and WebSockets, streaming live payloads directly to the browser.",
+        "Engineered an API cloning feature supporting authenticated external requests with custom headers and body capture.",
+        "Deployed backend on Render and frontend on Vercel with a multi-tenant namespace architecture."
+      ],
+      links: {
+        demo: "https://mirror-api-seven.vercel.app/",
+        code: "https://github.com/droid-anuj/MirrorAPI"
+      }
+    },
+    {
+      name: "FilmZ -- Movie Discovery Application",
+      description:
+        "A movie browsing and discovery platform with advanced search, filtering, and state management.",
+      tech: ["React", "Redux", "TMDB API", "JavaScript"],
+
       featured: false,
       highlights: [
-        "Developed responsive movie browsing web app using React and Redux",
-        "Integrated TMDB APIs for movie data with search and filtering features",
-        "Improved data retrieval speed by 26% through optimized API calls",
-        "Implemented user reviews and rating system with local storage"
+        "Developed movie browsing platform with Redux state management and TMDB API integration.",
+        "Implemented advanced search and filtering, improving content discoverability and user experience."
       ],
       links: {
         demo: "#",
@@ -42,39 +56,20 @@ const Projects = () => {
       }
     },
     {
-      name: "Image Classifier for Disease Detection",
+      name: "Medical Image Classification System",
       description:
-        "An AI-powered image classification system using CNN to detect diseases in chest X-ray images.",
-      tech: ["Python", "TensorFlow", "CNN", "EfficientNet-B0"],
-      date: "2024",
+        "A deep learning computer vision model and inference pipeline for clinical pneumonia detection.",
+      tech: ["Python", "TensorFlow", "CNN", "Flask"],
+
       featured: false,
       highlights: [
-        "Achieved 92% accuracy on validation set and 89% on test set",
-        "Utilized separate generators for validation and test sets optimization",
-        "Applied ROC curve and AUROC analysis for enhanced diagnosis",
-        "Implemented data augmentation to improve model generalization"
+        "Designed CNN model for pneumonia detection achieving 89% test accuracy on chest X-ray dataset.",
+        "Deployed inference pipeline via Flask API for real-time medical image classification.",
+        "Evaluated model performance using confusion matrix and AUC metrics to ensure clinical reliability."
       ],
       links: {
         demo: "#",
-        code: "#"
-      }
-    },
-    {
-      name: "ShopSense: Inventory Management System",
-      description:
-        "A dynamic web application built with React.js to streamline inventory management for businesses.",
-      tech: ["React.js", "Node.js", "MongoDB", "JWT", "Express.js"],
-      date: "2023",
-      featured: false,
-      highlights: [
-        "Developed responsive frontend with React and secure backend with Node.js",
-        "Implemented JWT-based authentication for enhanced user security",
-        "Built comprehensive inventory tracking with real-time updates",
-        "Created admin dashboard for inventory analytics and reporting"
-      ],
-      links: {
-        demo: "#",
-        code: "https://github.com/stickqz/IMS"
+        code: "https://github.com/droid-anuj"
       }
     }
   ];
@@ -84,7 +79,7 @@ const Projects = () => {
       {/* Static background elements */}
       <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-r from-orange-400/15 to-yellow-500/15 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-64 h-64 bg-gradient-to-r from-yellow-400/15 to-orange-500/15 rounded-full blur-3xl" />
-      
+
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,140,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,140,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_110%)]" />
 
@@ -107,11 +102,10 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`group relative ${
-                  project.featured 
-                    ? 'lg:col-span-2 bg-gradient-to-br from-white/95 to-orange-50/95' 
-                    : 'bg-white/90'
-                } backdrop-blur-sm rounded-3xl border border-orange-200/60 shadow-xl shadow-orange-500/5 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2`}
+                className={`group relative ${project.featured
+                  ? 'lg:col-span-2 bg-gradient-to-br from-white/95 to-orange-50/95'
+                  : 'bg-white/90'
+                  } backdrop-blur-sm rounded-3xl border border-orange-200/60 shadow-xl shadow-orange-500/5 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2`}
               >
                 {/* Featured badge */}
                 {project.featured && (
@@ -128,12 +122,8 @@ const Projects = () => {
                       <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-xl flex items-center justify-center">
                         <Code2 className="w-6 h-6 text-orange-600" />
                       </div>
-                      <div className="flex items-center gap-2 px-3 py-1 bg-orange-50 rounded-full border border-orange-100">
-                        <Calendar className="w-3 h-3 text-orange-600" />
-                        <span className="text-xs font-medium text-orange-700">{project.date}</span>
-                      </div>
                     </div>
-                    
+
                     <div className="flex gap-3">
                       <a
                         href={project.links.code}
@@ -160,7 +150,7 @@ const Projects = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-700 transition-colors">
                     {project.name}
                   </h3>
-                  
+
                   <p className="text-gray-600 leading-relaxed mb-6 text-lg">
                     {project.description}
                   </p>

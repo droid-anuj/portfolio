@@ -6,9 +6,9 @@ import { useRef } from "react";
 const Bio = () => {
   const constraintsRef = useRef(null);
   const bioContent = [
-    "I'm a passionate Full-Stack Developer with 1+ years of experience creating dynamic web applications.",
-    "Specializing in modern tech stacks, I bridge the gap between complex requirements and user-friendly experiences.",
-    "My mission: Build efficient digital solutions that make measurable impact."
+    "I'm a dedicated Software Engineer with 1+ years of experience building scalable REST APIs, Django-based services, and cloud-integrated systems.",
+    "I have a proven track record of improving API reliability, reducing database query latency, and delivering production-ready applications across EdTech and SaaS domains.",
+    "My mission is to drive backend performance, optimize database query execution, and design robust architectures at scale."
   ];
 
   return (
@@ -64,13 +64,13 @@ const Bio = () => {
                     {/* Skills Grid - Responsive */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       {[
-                        "Full-Stack Development",
-                        "Clean Architecture", 
-                        "API Integration",
-                        "Cloud Solutions",
-                        "Code Quality",
-                        "AI Integration",
-                        "LLM Applications"
+                        "Software Engineering",
+                        "Backend Development",
+                        "API System Design",
+                        "Database Management",
+                        "Cloud Integration (AWS)",
+                        "Real-Time Systems",
+                        "Clean Architecture"
                       ].map((skill) => (
                         <span
                           key={skill}

@@ -60,7 +60,7 @@ const Footer = () => {
                 </div>
                 
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  Passionate Full-Stack Developer crafting digital experiences that make a difference. 
+                  Passionate Software Engineer crafting scalable systems and reliable APIs that power digital experiences. 
                   Always learning, always building.
                 </p>
 

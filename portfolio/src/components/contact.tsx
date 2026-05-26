@@ -36,7 +36,7 @@ const ContactSection = () => {
         >
           {/* Border accent */}
           <div className="absolute inset-0 rounded-2xl sm:rounded-3xl border border-orange-300/30" />
-          
+
           <div className="relative p-6 sm:p-10 lg:p-16">
             {/* Section Header */}
             <motion.div
@@ -77,7 +77,7 @@ const ContactSection = () => {
                       Direct Contact
                     </h3>
                   </div>
-                  
+
                   <div className="space-y-4 relative">
                     <motion.button
                       onClick={handleCopy}
@@ -120,7 +120,7 @@ const ContactSection = () => {
                       Social Links
                     </h3>
                   </div>
-                  
+
                   <div className="space-y-3">
                     <motion.a
                       href="https://www.linkedin.com/in/anuj-yadav-194aa81bb/"
@@ -134,7 +134,7 @@ const ContactSection = () => {
                         LinkedIn Profile
                       </span>
                     </motion.a>
-                    
+
                     <motion.a
                       href="https://github.com/droid-anuj"
                       target="_blank"

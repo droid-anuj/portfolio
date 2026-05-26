@@ -1,61 +1,68 @@
 import React, { JSX } from 'react';
 import { Star, BookOpen, Compass, Zap, Code2 } from "lucide-react";
 import {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiDjango, SiGraphql,
-  SiDocker, SiKubernetes, SiAmazon, SiMongodb, SiPython, SiGit, SiMysql
+  SiReact, SiNextdotjs, SiTypescript, SiNodedotjs, SiDjango,
+  SiDocker, SiAmazon, SiMongodb, SiPython, SiGit, SiMysql, SiFirebase,
+  SiCplusplus, SiPostman, SiPostgresql, SiRedis, SiHtml5, SiCss3, SiJavascript
 } from "react-icons/si";
 
 // ✅ Fix: give explicit type
 const techIcons: Record<string, JSX.Element> = {
-  React: <SiReact className="w-6 h-6" />,
-  "Next.js": <SiNextdotjs className="w-6 h-6" />,
-  TypeScript: <SiTypescript className="w-6 h-6" />,
-  "Tailwind CSS": <SiTailwindcss className="w-6 h-6" />,
-  "Node.js": <SiNodedotjs className="w-6 h-6" />,
-  Django: <SiDjango className="w-6 h-6" />,
-  GraphQL: <SiGraphql className="w-6 h-6" />,
-  Docker: <SiDocker className="w-6 h-6" />,
-  Kubernetes: <SiKubernetes className="w-6 h-6" />,
-  AWS: <SiAmazon className="w-6 h-6" />,
-  MongoDB: <SiMongodb className="w-6 h-6" />,
-  Python: <SiPython className="w-6 h-6" />,
-  Git: <SiGit className="w-6 h-6" />,
-  "Database Management": <SiMysql className="w-6 h-6" />,
-  "Machine Learning": <SiPython className="w-6 h-6" />,
-  OOPS: <SiPython className="w-6 h-6" />
+  Python: <SiPython className="w-6 h-6 text-[#3776AB]" />,
+  Django: <SiDjango className="w-6 h-6 text-[#092E20]" />,
+  PostgreSQL: <SiPostgresql className="w-6 h-6 text-[#4169E1]" />,
+  "REST APIs": <Code2 className="w-6 h-6 text-orange-600" />,
+  Git: <SiGit className="w-6 h-6 text-[#F05032]" />,
+  React: <SiReact className="w-6 h-6 text-[#61DAFB]" />,
+  "Next.js": <SiNextdotjs className="w-6 h-6 text-black" />,
+  TypeScript: <SiTypescript className="w-6 h-6 text-[#3178C6]" />,
+  JavaScript: <SiJavascript className="w-6 h-6 text-[#F7DF1E]" />,
+  "Node.js": <SiNodedotjs className="w-6 h-6 text-[#339933]" />,
+  Firebase: <SiFirebase className="w-6 h-6 text-[#FFCA28]" />,
+  MongoDB: <SiMongodb className="w-6 h-6 text-[#47A248]" />,
+  Redis: <SiRedis className="w-6 h-6 text-[#DC382D]" />,
+  Docker: <SiDocker className="w-6 h-6 text-[#2496ED]" />,
+  AWS: <SiAmazon className="w-6 h-6 text-[#FF9900]" />,
+  "C++": <SiCplusplus className="w-6 h-6 text-[#00599C]" />,
+  Postman: <SiPostman className="w-6 h-6 text-[#FF6C37]" />,
+  "HTML5 & CSS": <div className="flex gap-1"><SiHtml5 className="w-5 h-5 text-[#E34F26]" /><SiCss3 className="w-5 h-5 text-[#1572B6]" /></div>,
+  "Database Management": <SiMysql className="w-6 h-6 text-[#4479A1]" />,
+  "Data Structures & Algorithms": <Code2 className="w-6 h-6 text-purple-600" />,
+  "System Design": <Code2 className="w-6 h-6 text-blue-600" />,
+  OOPS: <Code2 className="w-6 h-6 text-green-600" />
 };
 
 const TechStack = () => {
   const techStack = {
     expert: {
-      title: "Expert Level",
+      title: "Primary Stack",
       icon: <Star className="w-6 h-6" />,
       color: "from-orange-500 to-yellow-500",
       bgColor: "from-orange-100 to-yellow-100",
       borderColor: "border-orange-200",
       textColor: "text-orange-700",
       proficiency: "95%",
-      techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Django", "Python"]
+      techs: ["Python", "Django", "PostgreSQL", "REST APIs", "Git"]
     },
     intermediate: {
-      title: "Intermediate",
+      title: "Libraries & Cloud",
       icon: <BookOpen className="w-6 h-6" />,
       color: "from-blue-500 to-purple-500",
       bgColor: "from-blue-100 to-purple-100",
       borderColor: "border-blue-200",
       textColor: "text-blue-700",
-      proficiency: "75%",
-      techs: ["Node.js", "MongoDB", "GraphQL", "Machine Learning", "OOPS", "Database Management"]
+      proficiency: "80%",
+      techs: ["React", "Next.js", "TypeScript", "JavaScript", "Node.js", "Firebase", "MongoDB", "Redis", "AWS", "Docker"]
     },
     learning: {
-      title: "Exploring",
+      title: "CS & Languages",
       icon: <Compass className="w-6 h-6" />,
       color: "from-green-500 to-teal-500",
       bgColor: "from-green-100 to-teal-100",
       borderColor: "border-green-200",
       textColor: "text-green-700",
-      proficiency: "60%",
-      techs: ["Docker", "Kubernetes", "AWS", "Git"]
+      proficiency: "75%",
+      techs: ["C++", "HTML5 & CSS", "Data Structures & Algorithms", "System Design", "Database Management", "OOPS"]
     }
   };
 

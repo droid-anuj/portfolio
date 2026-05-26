@@ -5,38 +5,71 @@ import { Briefcase, Rocket, Code, Target, Calendar, Building } from "lucide-reac
 const Experience = () => {
   const experiences = [
     {
-      company: "BigFig AI",
-      role: "SDE-1 Backend Developer",
-      duration: "March 2024 - May 2025",
-      status: "Current",
-      description: "Developing scalable backend services and implementing robust API architectures for AI-driven applications. Working with cross-functional teams to deliver high-performance solutions.",
-      icon: <Rocket className="w-7 h-7" />,
-      companyType: "AI Startup",
+      company: "Self-Employed",
+      role: "Freelance Backend Developer",
+      duration: "Aug 2025 - Jan 2026",
+      status: "Previous",
+      description: "Architected and delivered the backend for a production-ready EdTech mobile application. Managed the end-to-end development lifecycle, cloud deployment, and performance tuning.",
+      icon: <Briefcase className="w-7 h-7" />,
+      companyType: "Remote Freelance",
       highlights: {
-        techStack: ["Django", "AWS", "Python", "PostgreSQL", "Redis", "Docker"],
+        techStack: ["Django", "Firebase", "PostgreSQL", "Firestore", "REST APIs", "iOS/Android Integration"],
         achievements: [
-        "Integrated OAuth-based authentication and a payment gateway",
-        "Optimized database queries, reducing response time by 40%",
-        "Implemented caching strategies to improve performance",
-        "Deployed microservices on AWS infrastructure"
-      ]
+          "Architected and delivered the backend for a production-ready EdTech mobile application using Django, Firebase, and PostgreSQL.",
+          "Implemented secure user authentication, real-time data sync, and role-based access control using Firebase Authentication and Firestore.",
+          "Designed and optimized REST APIs handling high concurrency with seamless iOS/Android integration.",
+          "Managed end-to-end development lifecycle including system architecture, cloud deployment, and performance tuning."
+        ]
       }
     },
     {
-      company: "UnityLab AI",
-      role: "Full-Stack Developer",
-      duration: "December 2023 - March 2024",
+      company: "Bigfig.AI",
+      role: "Software Development Engineer I",
+      duration: "Nov 2024 - May 2025",
       status: "Previous",
-      description: "Developed interactive user interfaces and integrated RESTful APIs to enhance product performance. Built end-to-end features from database to frontend.",
-      icon: <Briefcase className="w-7 h-7" />,
-      companyType: "Tech Company",
+      description: "Scaled backend services, improved database query efficiency, and delivered critical modules for SaaS platform.",
+      icon: <Rocket className="w-7 h-7" />,
+      companyType: "Bengaluru, Remote",
       highlights: {
-        techStack: ["React", "Node.js", "JavaScript", "MongoDB", "Express.js"],
+        techStack: ["Django", "PostgreSQL", "Python", "REST APIs", "Query Optimization"],
         achievements: [
-          "Developed responsive web applications",
-          "Integrated third-party APIs and services",
-          "Built user authentication and authorization",
-          "Optimized frontend performance and UX"
+          "Scaled Django backend services to support 1000+ daily active users, improving API reliability by 35%.",
+          "Reduced database query latency by 30% through targeted PostgreSQL indexing and query optimization.",
+          "Delivered two internal platform modules on schedule, collaborating closely with product and engineering teams."
+        ]
+      }
+    },
+    {
+      company: "Bigfig.AI",
+      role: "Software Development Engineer Intern",
+      duration: "Mar 2024 - Nov 2024",
+      status: "Previous",
+      description: "Developed REST APIs using Django REST Framework and optimized application performance using caching and OAuth integration.",
+      icon: <Code className="w-7 h-7" />,
+      companyType: "Bengaluru, Remote",
+      highlights: {
+        techStack: ["Django", "Django REST Framework", "OAuth 2.0", "Redis", "PostgreSQL", "Python"],
+        achievements: [
+          "Built and maintained REST APIs using Django REST Framework, saving 15 hours of development time per sprint.",
+          "Integrated OAuth 2.0 authentication flows, improving login performance by 30%.",
+          "Optimized application response speed by 25% through Redis caching and database query improvements."
+        ]
+      }
+    },
+    {
+      company: "Unity Labs",
+      role: "Full Stack Developer Intern",
+      duration: "Jan 2024 - Mar 2024",
+      status: "Previous",
+      description: "Developed reusable UI components using React and Next.js and optimized dashboard API integrations.",
+      icon: <Briefcase className="w-7 h-7" />,
+      companyType: "Remote Intern",
+      highlights: {
+        techStack: ["React", "Next.js", "REST APIs", "JavaScript", "TypeScript"],
+        achievements: [
+          "Developed 15+ reusable UI components with React and Next.js, accelerating feature delivery by 20%.",
+          "Optimized dashboard API integrations, reducing frontend load time by 25%.",
+          "Delivered fully responsive, cross-browser compatible interfaces across all major platforms."
         ]
       }
     }
@@ -172,9 +205,9 @@ const Experience = () => {
             <Building className="w-12 h-12 text-orange-600 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Career Journey</h3>
             <p className="text-gray-600 leading-relaxed">
-              From full-stack development to specialized backend engineering, I&apos;ve grown through diverse 
-              technical challenges and contributed to innovative AI-driven solutions. Currently focused on 
-              building scalable backend systems and exploring cutting-edge technologies.
+              From full-stack development to software engineering, I&apos;ve grown through diverse 
+              technical challenges and contributed to scalable systems across SaaS and EdTech. Currently focused on 
+              building high-performance APIs, database optimization, and robust backend architectures.
             </p>
           </div>
         </div>

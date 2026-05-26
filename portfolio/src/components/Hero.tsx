@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   const constraintsRef = useRef(null);
-  const technologies = ["Django", "Next.js", "React", "Angular" ,"Node.js"];
+  const technologies = ["Python", "Django", "Next.js", "React", "Node.js", "PostgreSQL", "Firebase"];
 
   return (
     <section 
@@ -44,7 +44,7 @@ const Hero = () => {
             <div className="text-xl md:text-2xl mb-8 font-mono text-gray-700">
               <span className="mr-2 text-orange-600">&gt;_</span>
               <span className="border-r-2 border-orange-500 pr-1">
-                Full stack Developer  | Backend Developer
+                Software Engineer
               </span>
             </div>
 

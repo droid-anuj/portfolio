@@ -5,30 +5,30 @@ import { GraduationCap, Book, Code, Trophy, Calendar, MapPin } from "lucide-reac
 
 const Education = () => {
   const education = {
-    degree: "Bachelor of Technology in Computer Science and Engineering",
-    institution: "Indian Institute of Information Technology, Kota",
-    duration: "2020 - 2024",
-    location: "Kota, Rajasthan",
-    description: "Focused extensively on software development principles, advanced data structures, algorithmic problem-solving, and modern web technologies. Maintained academic excellence throughout the program and graduated with Consistent Honors, consistently demonstrating strong analytical and technical capabilities.",
+    degree: "Bachelor of Technology in Computer Science Engineering",
+    institution: "Indian Institute of Information Technology Kota",
+    duration: "June 2025",
+    location: "Kota, India",
+    description: "Focused on advanced software engineering principles, data structures, algorithms, system design, and database management. Consistently engaged in competitive programming and problem-solving, applying academic knowledge to build production-ready software systems.",
     highlights: [
       {
         icon: <Book className="w-5 h-5" />,
         title: "Core Subjects",
-        items: ["Data Structures", "Algorithms", "Operating Systems", "Database Management"]
+        items: ["Data Structures & Algorithms", "System Design", "Operating Systems", "Database Management Systems", "Agile & SDLC"]
       },
       {
         icon: <Code className="w-5 h-5" />,
         title: "Technical Skills",
-        items: ["Full Stack Development", "System Design", "Cloud Computing", "AI/ML"]
+        items: ["Software Engineering", "Backend Development", "REST APIs", "Cloud Infrastructure"]
       },
       {
         icon: <Trophy className="w-5 h-5" />,
         title: "Coding Excellence",
         items: [
-          "300+ LeetCode Problems Solved",
-          "Data Structures Expert",
-          "Algorithm Specialist",
-          "Problem-Solving Enthusiast"
+          "700+ LeetCode Problems Solved",
+          "Data Structures Specialist",
+          "Algorithm Design & Optimization",
+          "Active Coding Enthusiast"
         ]
       }
     ]
@@ -148,7 +148,7 @@ const Education = () => {
         <div className="max-w-2xl mx-auto mt-16 text-center">
           <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-600 text-white rounded-full shadow-lg">
             <Trophy className="w-6 h-6" />
-            <span className="font-bold text-lg">Graduated with Consistent Honors</span>
+            <span className="font-bold text-lg">IIIT Kota Class of 2025</span>
           </div>
         </div>
 
